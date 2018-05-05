@@ -28,7 +28,7 @@ passengers() {
 class Passenger {
   constructor(name) {
     this.name = name;
-    this.id = ++passengerID;
+    this.id = ++passengerId;
 
     store.passengers.push(this);
   }
@@ -37,15 +37,15 @@ class Passenger {
     return store.trips.filter(trip => {
       return trip.passengerId == this.id;
     });
-  };
+  }
 
 
   drivers() {
     return this.trips().map(trip => {
       return trip.driver();
     });
-  };
-};
+  }
+}
 
 class Trip {
   constructor(driver, passenger) {
