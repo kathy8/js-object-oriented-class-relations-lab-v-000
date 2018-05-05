@@ -18,8 +18,8 @@ class Driver {
 }
 
 passengers() {
-   return store.trips.filter(trip => {
-     return trip.driverid === this.id;
+   return this.trips().map(trip = )
+        return trip.driverid === this.id;
    });
  }
  }
