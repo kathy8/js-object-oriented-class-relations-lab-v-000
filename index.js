@@ -4,13 +4,12 @@ let driverId = 0;
 let passengerId = 0;
 let tripId = 0;
 
- class Driver {
- constructor(name) {
+class Driver {
+  constructor(name) {
     this.name = name;
-    this.id = ++driverId;
-
+    this.id = driverid++;
     store.drivers.push(this);
-  };
+  }
 
  trips(){
  return store.trips.filter(trip=>{
